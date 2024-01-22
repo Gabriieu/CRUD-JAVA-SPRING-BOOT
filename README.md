@@ -4,7 +4,9 @@ Este é um projeto simples de CRUD (Create, Read, Update, Delete) de usuários, 
 
 # Requisitos do Sistema
 Java 17
+<br/>
 Maven
+<br/>
 MySQL (ou outro banco de dados configurado)
 
 # Configuração do Banco de Dados
@@ -15,17 +17,28 @@ O projeto utiliza o Spring Data JPA e está configurado para se integrar ao MySQ
 A API fornece os seguintes endpoints:
 
 `GET /api/v1/users/all: Retorna todos os usuários cadastrados.`
+<br/>
 `GET /api/v1/users/{id}: Retorna os detalhes de um usuário específico.`
+<br/>
 `POST /api/v1/users: Cria um novo usuário.`
+<br/>
 `PATCH /api/v1/users/{id}: Atualiza parcialmente as informações de um usuário.`
+<br/>
 `DELETE /api/v1/users/{id}: Exclui um usuário.`
 
 # Bibliotecas Utilizadas
 **Spring Boot Starter Data JPA:** Suporte para persistência de dados.
+<br/>
 **Spring Boot Starter Validation:** Validação de dados.
+<br/>
 **Spring Boot Starter Web:** Suporte para desenvolvimento de aplicativos web.
+<br/>
 **Spring Boot DevTools:** Ferramentas para desenvolvimento mais eficiente.
+<br/>
 **MySQL Connector/J:** Conector JDBC para MySQL.
+<br/>
 **ModelMapper:** Facilita o mapeamento de objetos.
+<br/>
 **Spring Boot Starter Security:** Suporte básico para segurança.
+<br/>
 **Spring Boot Starter Test:** Suporte para testes.
