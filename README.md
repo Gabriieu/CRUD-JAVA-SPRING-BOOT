@@ -13,18 +13,23 @@ MySQL (ou outro banco de dados configurado)
 O projeto utiliza o Spring Data JPA e está configurado para se integrar ao MySQL. Certifique-se de criar um banco de dados e configurar as credenciais no arquivo application.properties.
 
 # Endpoints da API
-
+**URL base:** `localhost:8080/api/v1`
+<br/>
 A API fornece os seguintes endpoints:
 
-`GET /api/v1/users/all: Retorna todos os usuários cadastrados.`
+`GET /users/all: Retorna todos os usuários cadastrados.`
 <br/>
-`GET /api/v1/users/{id}: Retorna os detalhes de um usuário específico.`
 <br/>
-`POST /api/v1/users: Cria um novo usuário.`
+`GET /users/{id}: Retorna os detalhes de um usuário específico.`
 <br/>
-`PATCH /api/v1/users/{id}: Atualiza parcialmente as informações de um usuário.`
 <br/>
-`DELETE /api/v1/users/{id}: Exclui um usuário.`
+`POST /users: Cria um novo usuário.`
+<br/>
+<br/>
+`PATCH /users/{id}: Atualiza parcialmente as informações de um usuário.`
+<br/>
+<br/>
+`DELETE /users/{id}: Exclui um usuário.`
 
 # Bibliotecas Utilizadas
 **Spring Boot Starter Data JPA:** Suporte para persistência de dados.
