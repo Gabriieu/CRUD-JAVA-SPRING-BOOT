@@ -1,7 +1,12 @@
 package com.jose.crudusers.DTO;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.Objects;
 
+@Getter
+@Setter
 public class UserResponseDTO {
 
     private Long id;

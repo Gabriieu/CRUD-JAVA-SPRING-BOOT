@@ -30,6 +30,10 @@ public class UserController {
         return userServices.getUserById(id);
     }
 
+    @GetMapping(value = "/name/{username}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public List<UserResponseDTO> getUsersByName(@PathVariable String username){
+        return userServices.getUserByName(username);
+    }
     @GetMapping(value = "/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<UserResponseDTO> getAllUsers(){
         return userServices.getAllUsers();

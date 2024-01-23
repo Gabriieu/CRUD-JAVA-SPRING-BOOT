@@ -15,21 +15,25 @@ O projeto utiliza o Spring Data JPA e está configurado para se integrar ao MySQ
 # Endpoints da API
 **URL base:** `localhost:8080/api/v1`
 <br/>
-A API fornece os seguintes endpoints:
 
-`GET /users/all: Retorna todos os usuários cadastrados.`
+### ***A API fornece os seguintes endpoints:***
+
+`POST /users` *Cria um novo usuário.*
 <br/>
 <br/>
-`GET /users/{id}: Retorna os detalhes de um usuário específico.`
+`GET /users/all` *Retorna todos os usuários cadastrados.*
 <br/>
 <br/>
-`POST /users: Cria um novo usuário.`
+`GET /users/{id}` *Retorna os detalhes de um usuário por id.*
 <br/>
 <br/>
-`PATCH /users/{id}: Atualiza parcialmente as informações de um usuário.`
+`GET /users/name/{username}` *Retorna os detalhes de um usuário por username.*
 <br/>
 <br/>
-`DELETE /users/{id}: Exclui um usuário.`
+`PATCH /users/{id}` *Atualiza as informações de um usuário.*
+<br/>
+<br/>
+`DELETE /users/{id}` *Exclui um usuário.*
 
 # Bibliotecas Utilizadas
 **Spring Boot Starter Data JPA:** Suporte para persistência de dados.
@@ -41,6 +45,8 @@ A API fornece os seguintes endpoints:
 **Spring Boot DevTools:** Ferramentas para desenvolvimento mais eficiente.
 <br/>
 **MySQL Connector/J:** Conector JDBC para MySQL.
+<br/>
+**Lombok:** Para reduzir códigos repetitivos.
 <br/>
 **ModelMapper:** Facilita o mapeamento de objetos.
 <br/>

@@ -32,6 +32,12 @@ public class UserServices {
         return Mapper.parseObject(userFound, UserResponseDTO.class);
     }
 
+    public  List<UserResponseDTO> getUserByName(String name){
+        var usersFound = userRepository.findUsersByUsername(name);
+
+        return Mapper.parseListObjects(usersFound, UserResponseDTO.class);
+    }
+
     public List<UserResponseDTO> getAllUsers() {
         return Mapper.parseListObjects(userRepository.findAll(), UserResponseDTO.class);
     }

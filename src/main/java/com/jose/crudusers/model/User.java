@@ -2,16 +2,21 @@ package com.jose.crudusers.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
 @Table(name = "users")
+@NoArgsConstructor
+@Getter
+@Setter
 public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Setter(AccessLevel.NONE)
     private Long id;
 
     @Column(name = "username", nullable = false, length = 64, unique = true)
@@ -24,36 +29,10 @@ public class User implements Serializable {
     @Column(name = "password", nullable = false, length = 256)
     private String password;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public void setUsername(String username) {
+    @Builder
+    public User(String username, String email, String password) {
         this.username = username;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-
-    public void setPassword(String password) {
         this.password = password;
     }
 
